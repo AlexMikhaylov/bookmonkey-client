@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+// decorator
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bookmonkey-client';
+
+  constructor() {
+    setTimeout(() => {
+      this.title = 'Alex'
+    }, 3000)
+  }
 }

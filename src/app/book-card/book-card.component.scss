@@ -1,0 +1,63 @@
+.book-card {
+    background-color: #ffffff;
+    /* White background */
+    padding: 20px;
+    /* Add padding inside the card */
+    margin: 15px;
+    /* Add margin outside the card */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow for a card effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Add transition for hover effects */
+
+    /* Hover effect */
+    &:hover {
+        transform: translateY(-5px);
+        /* Slightly lift the card */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        /* Intensify shadow on hover */
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        color: #333;
+        /* Darker color for the title */
+        margin-bottom: 10px;
+        /* Space below the title */
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        color: #777;
+        /* Lighter color for the author name */
+        margin-bottom: 15px;
+        /* Space below the author name */
+    }
+
+    a {
+        color: #007bff;
+        /* Link color */
+        text-decoration: none;
+        /* Remove underline */
+        font-weight: bold;
+        /* Bold text */
+        display: inline-block;
+        margin-bottom: 15px;
+        /* Space below the link */
+
+        &:hover {
+            text-decoration: underline;
+            /* Underline on hover */
+        }
+    }
+
+    p {
+        font-size: 1rem;
+        color: #555;
+        /* Slightly lighter text for the paragraph */
+        line-height: 1.5;
+        /* Improved readability */
+    }
+}

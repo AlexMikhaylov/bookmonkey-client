@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Book } from '../book';
 
 @Component({
   selector: 'app-book-card',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './book-card.component.scss'
 })
 export class BookCardComponent {
+  // For strict mode compatibility
+  // @Input() content!: Book;
+  @Input() content: Book = { title: '', author: '', abstract: '' }
 
+  customStyle = {
+    color: 'red'
+  };
 }

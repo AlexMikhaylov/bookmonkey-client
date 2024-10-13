@@ -1,9 +1,6 @@
 <div class="book-card">
-    <h3>Moby Dick</h3>
-    <h4>Herman Melville</h4>
+    <h3 [style]="customStyle">{{ content.title }}</h3>
+    <h4>{{ content.author }}</h4>
     <a href="">Details</a>
-    <p>
-        Moby Dick, novel by Herman Melville, published in London in October 1851 as The Whale and a month later
-        in New York City as Moby-Dick; or, The Whale.
-    </p>
+    <p>{{ content.abstract }}</p>
 </div>

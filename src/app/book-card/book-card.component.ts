@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Book } from '../book';
 
 @Component({
@@ -10,6 +10,7 @@ export class BookCardComponent {
   // For strict mode compatibility
   // @Input() content!: Book;
   @Input() content: Book = { title: '', author: '', abstract: '' }
+  @Output() detailClick = new EventEmitter<Book>();
 
   customStyle = {
     color: 'red'
@@ -17,7 +18,6 @@ export class BookCardComponent {
 
   handleDetailClick(click: MouseEvent){
     click.preventDefault();
-
-    console.log('Click Details-Link:', click);
+    this.detailClick.emit(this.content);
   }
 }

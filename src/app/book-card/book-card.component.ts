@@ -14,4 +14,10 @@ export class BookCardComponent {
   customStyle = {
     color: 'red'
   };
+
+  handleDetailClick(click: MouseEvent){
+    click.preventDefault();
+
+    console.log('Click Details-Link:', click);
+  }
 }
